@@ -1,176 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Advanced Object-Fit & Cropping</title>
+  <title>Advanced Table Styling</title>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="hero-header">
-    <h1>Advanced Object-Fit & Image Cropping</h1>
+  <header>
+    <h1>Advanced Table Styling</h1>
 
-    <p>
-      Explore responsive image cropping, object-fit,
-      object-position, aspect ratios, and gallery layouts.
+    <p class="intro">
+      Explore sticky headers, hover effects,
+      sortable columns, collapsible rows,
+      and responsive table layouts.
     </p>
   </header>
 
-  <!-- STRETCH PROBLEM -->
+  <!-- TABLE WRAPPER -->
   <section class="card">
-    <h2>Image Stretching Problem</h2>
 
-    <div class="comparison-grid">
+    <h2>Interactive Sales Table</h2>
 
-      <div>
-        <h3>Without object-fit</h3>
+    <div class="table-wrapper">
 
-        <img
-          src="https://picsum.photos/id/1015/800/500"
-          alt="Stretched image example"
-          class="stretch"
-        >
-      </div>
+      <table id="sales-table">
 
-      <div>
-        <h3>With object-fit: cover</h3>
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)">
+              Month
+            </th>
 
-        <img
-          src="https://picsum.photos/id/1015/800/500"
-          alt="Proper cropped image example"
-          class="cover"
-        >
-      </div>
+            <th onclick="sortTable(1)">
+              Revenue
+            </th>
+
+            <th onclick="sortTable(2)">
+              Region
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <!-- ROW 1 -->
+          <tr class="parent">
+            <td>January</td>
+            <td>$5,000</td>
+            <td>North</td>
+          </tr>
+
+          <tr class="child">
+            <td colspan="3">
+              Top-selling products increased winter revenue.
+            </td>
+          </tr>
+
+          <!-- ROW 2 -->
+          <tr class="parent">
+            <td>February</td>
+            <td>$7,200</td>
+            <td>South</td>
+          </tr>
+
+          <tr class="child">
+            <td colspan="3">
+              Seasonal promotions improved engagement.
+            </td>
+          </tr>
+
+          <!-- ROW 3 -->
+          <tr class="parent">
+            <td>March</td>
+            <td>$6,400</td>
+            <td>West</td>
+          </tr>
+
+          <tr class="child">
+            <td colspan="3">
+              Product redesign campaign launched successfully.
+            </td>
+          </tr>
+
+          <!-- ROW 4 -->
+          <tr class="parent">
+            <td>April</td>
+            <td>$8,100</td>
+            <td>East</td>
+          </tr>
+
+          <tr class="child">
+            <td colspan="3">
+              Spring campaign increased overall visibility.
+            </td>
+          </tr>
+
+        </tbody>
+
+      </table>
 
     </div>
+
   </section>
 
-  <!-- OBJECT POSITION -->
-  <section class="card">
-    <h2>object-position Focus Control</h2>
-
-    <div class="comparison-grid">
-
-      <div>
-        <h3>Center Focus</h3>
-
-        <img
-          src="https://picsum.photos/id/1027/600/800"
-          alt="Centered portrait"
-          class="portrait center-focus"
-        >
-      </div>
-
-      <div>
-        <h3>Top Focus</h3>
-
-        <img
-          src="https://picsum.photos/id/1027/600/800"
-          alt="Top aligned portrait"
-          class="portrait top-focus"
-        >
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ASPECT RATIO -->
-  <section class="card">
-    <h2>Aspect Ratio Cropping</h2>
-
-    <div class="aspect-wrapper">
-      <img
-        src="https://picsum.photos/id/1043/1000/600"
-        alt="16 by 9 landscape"
-      >
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section class="card">
-    <h2>Responsive Gallery</h2>
-
-    <div class="gallery">
-
-      <img
-        src="https://picsum.photos/id/1050/600/800"
-        alt="Gallery image"
-      >
-
-      <img
-        src="https://picsum.photos/id/1060/900/600"
-        alt="Gallery image"
-      >
-
-      <img
-        src="https://picsum.photos/id/1074/700/700"
-        alt="Gallery image"
-      >
-
-      <img
-        src="https://picsum.photos/id/1084/800/500"
-        alt="Gallery image"
-      >
-
-    </div>
-  </section>
-
-  <!-- FILTER + OBJECT FIT -->
-  <section class="card">
-    <h2>Filters + Object Fit</h2>
-
-    <img
-      src="https://picsum.photos/id/1067/1200/700"
-      alt="Filtered feature image"
-      class="feature-image"
-    >
-  </section>
-
-  <!-- HERO BANNER -->
-  <section class="card">
-    <h2>Cropped Hero Banner</h2>
-
-    <div class="hero-banner">
-
-      <img
-        src="https://picsum.photos/id/1036/1600/900"
-        alt="Hero banner image"
-      >
-
-    </div>
-  </section>
-
-  <!-- SQUARE GRID -->
-  <section class="card">
-    <h2>Square Grid Layout</h2>
-
-    <div class="square-grid">
-
-      <img
-        src="https://picsum.photos/id/1011/700/500"
-        alt="Square crop"
-      >
-
-      <img
-        src="https://picsum.photos/id/1012/500/900"
-        alt="Square crop"
-      >
-
-      <img
-        src="https://picsum.photos/id/1013/1000/600"
-        alt="Square crop"
-      >
-
-      <img
-        src="https://picsum.photos/id/1016/800/1200"
-        alt="Square crop"
-      >
-
-    </div>
-  </section>
+  <script src="script.js"></script>
 
 </body>
 </html>
