@@ -1,0 +1,241 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+body {
+  font-family: Arial, sans-serif;
+
+  background-color: #fef6e4;
+  color: #172c66;
+
+  margin: 0;
+  padding: 40px;
+
+  line-height: 1.6;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1,
+h2,
+h3 {
+  color: green;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.hero-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  background-color: white;
+
+  border: 3px solid #172c66;
+  border-radius: 12px;
+
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   IMAGE BASICS
+========================= */
+
+img {
+  display: block;
+
+  width: 100%;
+}
+
+/* =========================
+   COMPARISON GRID
+========================= */
+
+.comparison-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 2rem;
+}
+
+/* =========================
+   STRETCH VS COVER
+========================= */
+
+.stretch,
+.cover {
+  width: 100%;
+  height: 250px;
+
+  border-radius: 10px;
+}
+
+.stretch {
+  object-fit: fill;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+/* =========================
+   OBJECT POSITION
+========================= */
+
+.portrait {
+  width: 100%;
+  height: 350px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+}
+
+.center-focus {
+  object-position: center;
+}
+
+.top-focus {
+  object-position: top center;
+}
+
+/* =========================
+   ASPECT RATIO
+========================= */
+
+.aspect-wrapper {
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+}
+
+.aspect-wrapper img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* =========================
+   RESPONSIVE GALLERY
+========================= */
+
+.gallery {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 1rem;
+}
+
+.gallery img {
+  height: 220px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.02);
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   FILTER + OBJECT FIT
+========================= */
+
+.feature-image {
+  height: 350px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  filter: grayscale(80%) contrast(110%);
+
+  transition: filter 0.3s ease;
+}
+
+.feature-image:hover {
+  filter: grayscale(0%);
+}
+
+/* =========================
+   HERO BANNER
+========================= */
+
+.hero-banner {
+  width: 100%;
+  height: 70vh;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center top;
+}
+
+/* =========================
+   SQUARE IMAGE GRID
+========================= */
+
+.square-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(200px, 1fr));
+
+  gap: 1rem;
+}
+
+.square-grid img {
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 20px;
+  }
+
+  .hero-banner {
+    height: 40vh;
+  }
+}

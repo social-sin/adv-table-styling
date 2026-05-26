@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Advanced Object-Fit & Cropping</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="hero-header">
+    <h1>Advanced Object-Fit & Image Cropping</h1>
+
+    <p>
+      Explore responsive image cropping, object-fit,
+      object-position, aspect ratios, and gallery layouts.
+    </p>
+  </header>
+
+  <!-- STRETCH PROBLEM -->
+  <section class="card">
+    <h2>Image Stretching Problem</h2>
+
+    <div class="comparison-grid">
+
+      <div>
+        <h3>Without object-fit</h3>
+
+        <img
+          src="https://picsum.photos/id/1015/800/500"
+          alt="Stretched image example"
+          class="stretch"
+        >
+      </div>
+
+      <div>
+        <h3>With object-fit: cover</h3>
+
+        <img
+          src="https://picsum.photos/id/1015/800/500"
+          alt="Proper cropped image example"
+          class="cover"
+        >
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OBJECT POSITION -->
+  <section class="card">
+    <h2>object-position Focus Control</h2>
+
+    <div class="comparison-grid">
+
+      <div>
+        <h3>Center Focus</h3>
+
+        <img
+          src="https://picsum.photos/id/1027/600/800"
+          alt="Centered portrait"
+          class="portrait center-focus"
+        >
+      </div>
+
+      <div>
+        <h3>Top Focus</h3>
+
+        <img
+          src="https://picsum.photos/id/1027/600/800"
+          alt="Top aligned portrait"
+          class="portrait top-focus"
+        >
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ASPECT RATIO -->
+  <section class="card">
+    <h2>Aspect Ratio Cropping</h2>
+
+    <div class="aspect-wrapper">
+      <img
+        src="https://picsum.photos/id/1043/1000/600"
+        alt="16 by 9 landscape"
+      >
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="card">
+    <h2>Responsive Gallery</h2>
+
+    <div class="gallery">
+
+      <img
+        src="https://picsum.photos/id/1050/600/800"
+        alt="Gallery image"
+      >
+
+      <img
+        src="https://picsum.photos/id/1060/900/600"
+        alt="Gallery image"
+      >
+
+      <img
+        src="https://picsum.photos/id/1074/700/700"
+        alt="Gallery image"
+      >
+
+      <img
+        src="https://picsum.photos/id/1084/800/500"
+        alt="Gallery image"
+      >
+
+    </div>
+  </section>
+
+  <!-- FILTER + OBJECT FIT -->
+  <section class="card">
+    <h2>Filters + Object Fit</h2>
+
+    <img
+      src="https://picsum.photos/id/1067/1200/700"
+      alt="Filtered feature image"
+      class="feature-image"
+    >
+  </section>
+
+  <!-- HERO BANNER -->
+  <section class="card">
+    <h2>Cropped Hero Banner</h2>
+
+    <div class="hero-banner">
+
+      <img
+        src="https://picsum.photos/id/1036/1600/900"
+        alt="Hero banner image"
+      >
+
+    </div>
+  </section>
+
+  <!-- SQUARE GRID -->
+  <section class="card">
+    <h2>Square Grid Layout</h2>
+
+    <div class="square-grid">
+
+      <img
+        src="https://picsum.photos/id/1011/700/500"
+        alt="Square crop"
+      >
+
+      <img
+        src="https://picsum.photos/id/1012/500/900"
+        alt="Square crop"
+      >
+
+      <img
+        src="https://picsum.photos/id/1013/1000/600"
+        alt="Square crop"
+      >
+
+      <img
+        src="https://picsum.photos/id/1016/800/1200"
+        alt="Square crop"
+      >
+
+    </div>
+  </section>
+
+</body>
+</html>
